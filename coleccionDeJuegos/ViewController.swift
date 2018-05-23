@@ -15,8 +15,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.isEditing = true
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -31,6 +34,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let juego = juegos[indexPath.row]
         performSegue(withIdentifier: "juegoSegue" , sender: juego)
+        navigationController?.popViewController(animated: true)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let siguienteVC = segue.destination as! JuegosViewController
@@ -45,6 +50,25 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         cell.textLabel?.text = juego.titulo
         cell.imageView?.image = UIImage(data: (juego.imagen!) as Data)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(juegos[indexPath.row])
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            juegos.remove(at: indexPath.row)
+            
+        }
+        tableView.reloadData()
+    }
+     func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let objm = self.juegos[fromIndexPath.row]
+        juegos.remove(at: fromIndexPath.row)
+        juegos.insert(objm, at: to.row)
+        NSLog("%@", "\(fromIndexPath.row) => \(to.row) \(juegos)")
+        
     }
 }
 

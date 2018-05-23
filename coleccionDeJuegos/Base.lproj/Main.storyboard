@@ -83,14 +83,39 @@
                                     <constraint firstAttribute="width" constant="240" id="cq3-rB-5cK"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-EG-iZq">
+                                <rect key="frame" x="68" y="404" width="240" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="8wX-Xc-5TE"/>
+                                    <constraint firstAttribute="width" constant="240" id="DJm-iE-i6n"/>
+                                    <constraint firstAttribute="height" constant="30" id="KdS-bf-78b"/>
+                                </constraints>
+                                <state key="normal" title="HOLA">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="opcionOnclick:" destination="aIn-qJ-evQ" eventType="touchUpInside" id="7Bp-DA-HaH"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AU-ln-g7y">
+                                <rect key="frame" x="68" y="404" width="240" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3wg-9t-PvK"/>
+                                    <constraint firstAttribute="width" constant="240" id="uJK-gk-zpz"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7AU-ln-g7y" firstAttribute="top" secondItem="ypl-EG-iZq" secondAttribute="bottom" id="3Ub-M8-Rmr"/>
                             <constraint firstItem="H6F-S1-gsm" firstAttribute="top" secondItem="RWP-J4-6Ys" secondAttribute="bottom" constant="20" id="9ue-gZ-RYQ"/>
                             <constraint firstItem="H6F-S1-gsm" firstAttribute="centerX" secondItem="ZrR-Ax-0kG" secondAttribute="centerX" id="DGh-Y3-HBn"/>
+                            <constraint firstItem="ypl-EG-iZq" firstAttribute="top" secondItem="YKi-sR-M4w" secondAttribute="bottom" constant="20" id="HmD-hM-PGW"/>
                             <constraint firstItem="YKi-sR-M4w" firstAttribute="top" secondItem="H6F-S1-gsm" secondAttribute="bottom" constant="20" id="IUH-3H-7oq"/>
                             <constraint firstItem="YKi-sR-M4w" firstAttribute="centerX" secondItem="ZrR-Ax-0kG" secondAttribute="centerX" id="IYo-L4-jX6"/>
+                            <constraint firstItem="7AU-ln-g7y" firstAttribute="centerX" secondItem="ZrR-Ax-0kG" secondAttribute="centerX" id="LNo-QV-z32"/>
                             <constraint firstItem="RWP-J4-6Ys" firstAttribute="centerX" secondItem="ZrR-Ax-0kG" secondAttribute="centerX" id="LVU-JR-C42"/>
+                            <constraint firstItem="7AU-ln-g7y" firstAttribute="top" secondItem="YKi-sR-M4w" secondAttribute="bottom" constant="20" id="aWA-xE-lIj"/>
                             <constraint firstItem="RWP-J4-6Ys" firstAttribute="width" secondItem="w8E-bc-NUW" secondAttribute="width" id="beA-8y-Nfe"/>
                             <constraint firstItem="w8E-bc-NUW" firstAttribute="top" secondItem="waL-jF-nhu" secondAttribute="top" constant="20" id="iGy-f2-0bE"/>
                             <constraint firstItem="w8E-bc-NUW" firstAttribute="centerX" secondItem="ZrR-Ax-0kG" secondAttribute="centerX" id="lfp-T4-nIC"/>
@@ -116,6 +141,8 @@
                         <outlet property="JuegoImageView" destination="w8E-bc-NUW" id="CGw-xR-Hrv"/>
                         <outlet property="addActButton" destination="H6F-S1-gsm" id="L0f-wA-1zv"/>
                         <outlet property="eliminarB" destination="YKi-sR-M4w" id="cmN-2W-XaK"/>
+                        <outlet property="opciones" destination="ypl-EG-iZq" id="jCf-dv-8TF"/>
+                        <outlet property="pickerView" destination="7AU-ln-g7y" id="H0k-ib-ewY"/>
                         <outlet property="tituloTextField" destination="RWP-J4-6Ys" id="tNO-DQ-sei"/>
                     </connections>
                 </viewController>
