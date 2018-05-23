@@ -13,6 +13,7 @@
 		B58089FB20B5AEFE004322CE /* coleccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B58089F920B5AEFE004322CE /* coleccionDeJuegos.xcdatamodeld */; };
 		B58089FD20B5AEFF004322CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58089FC20B5AEFF004322CE /* Assets.xcassets */; };
 		B5808A0020B5AEFF004322CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58089FE20B5AEFF004322CE /* LaunchScreen.storyboard */; };
+		B5808A0820B5B571004322CE /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5808A0720B5B571004322CE /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B58089FC20B5AEFF004322CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B58089FF20B5AEFF004322CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5808A0120B5AEFF004322CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5808A0720B5B571004322CE /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B58089FE20B5AEFF004322CE /* LaunchScreen.storyboard */,
 				B5808A0120B5AEFF004322CE /* Info.plist */,
 				B58089F920B5AEFE004322CE /* coleccionDeJuegos.xcdatamodeld */,
+				B5808A0720B5B571004322CE /* JuegosViewController.swift */,
 			);
 			path = coleccionDeJuegos;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B58089F520B5AEFE004322CE /* ViewController.swift in Sources */,
+				B5808A0820B5B571004322CE /* JuegosViewController.swift in Sources */,
 				B58089FB20B5AEFE004322CE /* coleccionDeJuegos.xcdatamodeld in Sources */,
 				B58089F320B5AEFE004322CE /* AppDelegate.swift in Sources */,
 			);
